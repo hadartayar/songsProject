@@ -1,0 +1,44 @@
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  line-height: 40px;
+  margin: 1em 0 0.5em 0;
+  color: #343434;
+  font-weight: bold;
+  font-family: "Ultra", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-shadow: 0 2px white, 0 3px #777;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  text-align: center;
+  word-wrap: break-word;
+  background-color: #C8EBF9;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 0.7rem;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.formBtn{
+  margin-top: 10px;
+}
+
+.formBtn > Button{
+  width: 100%;
+  background-color: #778899;
+}
