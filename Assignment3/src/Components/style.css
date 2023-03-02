@@ -1,0 +1,231 @@
+
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flip-card,
+.flip-card img,
+.flip-card div {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #60a3bc;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 14px;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  line-height: 40px;
+  margin: 1em 0 0.5em 0;
+  color: #343434;
+  font-weight: bold;
+  font-family: "Ultra", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-shadow: 0 2px white, 0 3px #777;
+}
+
+button {
+  border: 1px solid black;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#newBtns {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+}
+
+#dishesContainer {
+  margin-top: 40px;
+  padding: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  justify-content: center;
+}
+
+/*  */
+
+.example_b {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+.example_b:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.btn,
+.btn-primary {
+  font-family: sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+.close {
+  font-size: 23px;
+  color: red;
+}
+
+#ingredientsCardContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  justify-content: center;
+}
+
+.ingredientsCard {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 14px;
+  font-family: sans-serif;
+  margin: 2px;
+  padding-top: 10px;
+}
+
+.ingredientsCard > img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.ingredientsCard > input {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.formTitle {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  line-height: 40px;
+  margin: 1em 0 0.5em 0;
+  color: #343434;
+  font-weight: bold;
+  font-family: "Ultra", sans-serif;
+  font-size: 25px;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-shadow: 0 2px white, 0 3px #777;
+}
+
+.formBtn {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.formBtn > button {
+  margin: 2px;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+ #addIngredient{
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+}
+
+.ingredientImg{
+  width: 50px;
+  height: 120px;
+  margin-bottom: 5px;
+}
+
+div .card {
+  width: 18rem;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid black;
+  height:100%;
+}
+
+#dishesContainer > div {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+#ingredientsCardContainer .card{
+  min-width: auto;
+}

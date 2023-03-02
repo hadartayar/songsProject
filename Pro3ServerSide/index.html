@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/ajaxCalls.js"></script>
+    <script>
+        function Init() {
+
+            ing1 = { Name: "sweet potato", Image: "https://www.ynet.co.il/PicServer4/2016/06/15/7071298/52931920991188640360no.jpg", Calories: 40 };
+            ing2 = { Name: "fish", Image: "https://img.mako.co.il/2009/12/23/salmonc.jpg", Calories: 300 };
+            
+
+            recipe = {
+                Id: 3,
+                Name: "Sushi",
+                Image: "https://www.vitrina.co.il/ItemPics/5de7bca4f2cdb.jpg",
+                CookingMethod: "Put vegetables and fish and roll in seaweed",
+                Time: 60
+            }
+            let list = [6, 7];
+
+            TotalObj = {
+                Recipe: recipe,
+                IngIdArr: list
+            }
+
+            console.log(TotalObj);
+            let api = "../api/TotalRecipes";
+            ajaxCall("POST", api, JSON.stringify(TotalObj), postSuccess, postError)
+
+            //let api = "../api/Recipes?Id=" + 1;
+            //ajaxCall("GET", api, "", postSuccess, postError);
+        }
+
+        function postSuccess(obj) {
+            console.log(obj);
+        }
+        function postError(err) {
+            alert("Error");
+            console.log(err);
+        }
+    </script>
+</head>
+<body onload="Init()">
+
+    
+</body>
+</html>
